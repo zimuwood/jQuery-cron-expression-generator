@@ -1,0 +1,280 @@
+/* Cron生成器组件样式 */
+.cron-generator-component {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    width: 100%;
+}
+
+.cron-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cron-header h2 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 16px
+}
+
+.cron-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.cron-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.cron-field {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.cron-field:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cron-field label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 14px;
+}
+
+/* =====================
+   Cron 生成器输入框样式
+   ===================== */
+.cron-generator-component input[type="number"],
+.cron-generator-component input[type="text"] {
+    width: 100%;
+    padding: 6px 10px; /* 内边距更舒适 */
+    font-size: 13px;
+    border: 1px solid #ccc; /* 浅灰边框 */
+    border-radius: 4px; /* 圆角 */
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+/* focus 高亮效果 */
+.cron-generator-component input[type="number"]:focus,
+.cron-generator-component input[type="text"]:focus {
+    border-color: #007bff; /* 蓝色边框 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* 禁用或只读输入框样式 */
+.cron-generator-component input[readonly],
+.cron-generator-component input:disabled {
+    background-color: #f5f5f5;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* list-option 输入框 (周复选框同步的文本框) */
+.cron-generator-component .advanced-options .list-option input {
+    font-weight: 500;
+}
+
+/* 占位符颜色 */
+.cron-generator-component input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.cron-options {
+    margin-bottom: 10px;
+}
+
+.cron-options select, .cron-options input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.cron-options select:focus, .cron-options input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.advanced-options {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+.advanced-options.active {
+    display: block;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.option-row input {
+    flex: 1;
+}
+
+.toggle-advanced {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #3498db;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px 0;
+    text-align: left;
+    margin-top: 5px;
+    transition: color 0.2s ease;
+}
+
+.toggle-advanced:hover {
+    color: #2980b9;
+}
+
+.cron-result {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.cron-result label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.cron-result input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    background: white;
+}
+
+.cron-description {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 15px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 20px;
+}
+
+.cron-description h4 {
+    color: #1976d2;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.cron-description p {
+    color: #263238;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-reset {
+    background: #ecf0f1;
+    color: #7f8c8d;
+}
+
+.btn-reset:hover {
+    background: #dcdde1;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+    display: block;
+}
+
+/* 周几选择特殊样式 */
+.weekdays {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.weekday {
+    flex: 1;
+    min-width: 25px;
+    text-align: center;
+}
+
+.weekday input {
+    display: none;
+}
+
+.weekday label {
+    display: block;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.weekday input:checked + label {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .cron-fields {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .cron-fields {
+        grid-template-columns: 1fr;
+    }
+}
